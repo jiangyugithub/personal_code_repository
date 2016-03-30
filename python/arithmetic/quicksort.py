@@ -3,26 +3,26 @@
 
 
 def quicksort(arr,i,j):
-	"""
-	quick sort function
-	@param[1]:arr [list] array target
-	@param[2]:i    [int]  leftindex
-	@param[3]:j    [int]  rightindex
-	@return:
-	"""
+    '''
+    @summary: quick sort function
+    @param arr:array target
+    @param i:leftindex
+    @param j:rightindex
+    @result: 
+    '''
 	if i<j:
 		base=sort_process(arr,i,j)
 		quicksort(arr,i,base-1)
 		quicksort(arr,base+1,j)
 
 def sort_process(arr,i,j):
-	"""
-	sort process function
-	@param[1]:arr [list] array target
-	@param[2]:i    [int]  leftindex
-	@param[3]:j    [int]  rightindex
-	@return:index of base
-	"""
+    '''
+    @summary: sort process function
+    @param arr:array target
+    @param i:leftindex
+    @param j:rightindex
+    @result: index of base
+    '''
 	base=arr[i]
 	while i<j:
 		if base<=arr[j]:
